@@ -1,0 +1,1 @@
+For Assignment 3 Source Code, refer to [this repository](https://github.com/tuankhoin/MCEN90048-EEG-Grasp-and-Lift-Detection).

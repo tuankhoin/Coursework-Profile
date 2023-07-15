@@ -1,0 +1,35 @@
+_Orientation: 0,y left,-9.8
+_Problem: Slope, unknown magnetic disturbance
+
+GPS:
+_Can only record max 1Hz
+_Error margin too large, short-distance walking will make very errorneous measurement
+_Too long recording time will not be recorded, user had to run to get a reasonable GPS estimation
+_Shaky phone during run
+
+Gyro (dead reckoning):
+_To init, needs magneto
+_Random walk noise (drift)
+
+Magneto:
+_Corrupted by magnetic sources -> Calib 1
+_Calib 2: Merge with compass data
+
+Kalman with sequential update
+
+Consider 2D only to
+_Avoid 'up & down' magnetic field
+_2D estimation, no need 3rd axis
+_Change represenation axis
+
+Filter:
+_Use mag field to correct gyro
+
+Method count:
+_Better angle estimation
+
+Step count: Detect steps, also detect walking ranges
+
+Stride estimation by step:
+_Better distance estimation
+_More discrete, fewer samples -> More imprecise at where requires it, specifically angle turns
